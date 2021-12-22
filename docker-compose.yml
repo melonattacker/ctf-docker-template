@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   dev:
+    tty: true
     build: .
     volumes:
       - type: bind
