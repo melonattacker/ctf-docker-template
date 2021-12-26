@@ -10,6 +10,7 @@ RUN sudo apt-get install -y \
     clang \
     build-essential \
     libssl-dev \
+    netcat \
     python3 \
     python3-pip \
     python3-gmpy2 \
@@ -20,7 +21,7 @@ RUN sudo apt-get install -y \
     mkdir ~/.sage && \
     echo "%colors Linux" > ~/.sage/init.sage
 
-RUN pip3 install pycryptodome && \
+RUN pip3 install pycryptodome pwntools && \
     sage --pip install pycryptodome
 
 WORKDIR /src
