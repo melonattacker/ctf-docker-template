@@ -1,19 +1,29 @@
-## 概要
-- ctf用のdockerテンプレート
+# Overview
+- docker template for ctf
 
-## 使えるツール
-### crypto
+# Available tools
+## crypto
+Available in `crypto` branch.
 - python
   - pycryptodome
   - gmpy2
 - sagemath
 
-### rev, pwn
+## rev, pwn
+Available in `master` branch.
 - gdb(gdb-peda)
+- gdbserver
+- checksec
+- one_gadget
+- Pwngdb
+- objdump
+- readelf
+- hexdump
+- etc..
 
-## 使い方
+# Usage
 
 ```
 $ docker-compose up -d --build
-$ docker-compose exec dev /bin/bash
+$ docker-compose exec dev /bin/bash # log in to container
 ```
